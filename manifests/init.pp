@@ -38,6 +38,8 @@ class monit (
   $monit_user      = undef,
   $monit_password  = undef,
   $package_version = undef,
+  $use_ssl         = undef,
+  $ssl_cert_path   = undef,
 ) inherits monit::params {
 
   $conf_include = "${monit::params::conf_dir}/*"
