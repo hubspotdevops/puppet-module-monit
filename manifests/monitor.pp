@@ -29,18 +29,19 @@
 #
 define monit::monitor (
   $pidfile,
-  $ensure        = present,
-  $ip_port       = 0,
-  $socket        = undef,
-  $checks        = [ ],
-  $start_script  = "/etc/init.d/${name} start",
-  $stop_script   = "/etc/init.d/${name} stop",
-  $start_timeout = undef,
-  $stop_timeout  = undef,
-  $group         = $name,
-  $alert_email   = undef,
-  $alert_events  = '',
-  $email_format  = undef,
+  $ensure         = present,
+  $ip_port        = 0,
+  $socket         = undef,
+  $checks         = [ ],
+  $start_script   = "/etc/init.d/${name} start",
+  $stop_script    = "/etc/init.d/${name} stop",
+  $start_timeout  = undef,
+  $stop_timeout   = undef,
+  $on_reboot_mode = undef,
+  $group          = $name,
+  $alert_email    = undef,
+  $alert_events   = '',
+  $email_format   = undef,
 ) {
   include monit::params
 
